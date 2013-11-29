@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Merci !</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		
+		<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+		<!-- jQueryMobileCSS - original without styling -->
+        <link rel="stylesheet" href="css/jquerymobile.css" />
+
+		<!-- nativeDroid core CSS -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+
+		<!-- nativeDroid: Light/Dark -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+
+		<!-- nativeDroid: Color Schemes -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+
+		<!-- jQuery / jQueryMobile Scripts -->
+		<script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.mobile-1.3.1.min.js"></script>
+
+    </head>
+    <body>
+
+	<div id='map-canvas'></div>
+        
+    <div data-role="page" data-theme='b'>
+	        
+        <div data-role="panel" id="panel_rubrique" data-theme="b" data-position="right">
+            <ul data-role="listview">
+                <li data-role="list-divider">Categories</li>
+                <li><a href="#">Informatique</a></li>
+                <li><a href="#">Téléphonie</a></li>
+                <li><a href="#">Multimedia</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Vestimentaire</a></li>
+                <li><a href="#">Bijoux et accessoires</a></li>
+                <li><a href="#">Auto, Moto</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="#">Jeux, Jouets</a></li>               
+            </ul>
+        </div><!-- /panel_rubrique -->
+
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <a href="#" data-rel="back" data-ajax="false"><i class='icon-chevron-left'></i></a>
+            <h1>Boutiques</h1>
+            <a href="#panel_rubrique" data-ajax="false" ><i class='icon-reorder'></i></a>
+        </div>
+        
+        <div data-role="content">   
+
+
+			<ul data-nativedroid-plugin='cards'>
+
+				<li data-cards-type='publictransport'>
+                    <ul data-role="listview" data-inset="false" data-icon="false">
+                        <li><a href="details_article.html">
+                            <img src="http://www.placehold.it/150x150">
+                            <h1>Boutique 1</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        </a></li>
+                    </ul>
+				</li>
+
+				<li data-cards-type='publictransport'>
+                    <ul data-role="listview" data-inset="false" data-icon="false">
+                        <li><a href="details_article.html">
+                            <img src="http://www.placehold.it/150x150">
+                            <h1>Boutique 2</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        </a></li>
+                    </ul>
+				</li>
+
+				<li data-cards-type='publictransport'>
+                    <ul data-role="listview" data-inset="false" data-icon="false">
+                        <li><a href="details_article.html">
+                            <img src="http://www.placehold.it/150x150">
+                            <h1>Boutique 3</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        </a></li>
+                    </ul>
+				</li>
+
+			</ul>
+            
+        </div>
+
+    </div>
+    
+
+    <script src="js/nativedroid.script.js"></script>
+    </body>
+</html>
