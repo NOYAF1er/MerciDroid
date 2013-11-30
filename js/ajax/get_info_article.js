@@ -14,6 +14,8 @@ $(document).ready(function(){
 		jsonp: 'jsoncallback',
 		type: 'GET',
 		data:'article='+id_article,
+		beforeSend : function() {$.mobile.loading('show')},
+		complete   : function() {$.mobile.loading('hide')},
 		timeout: 5000,
 		success: function(data, status){
 			$.each(data, function(i,item){
@@ -27,7 +29,11 @@ $(document).ready(function(){
 				var date_ajout = item.date_ajout;
 				var date_retrait = item.date_retrait;
 				
-				$('#wrap_caracteristiques ul li').append(caracteristiques).trigger( "create" );
+				$('#nom_article').html('<h1>'+nom+'</h1>').trigger( "create" );
+				$('#img_article').html('<img src="'+image+'" alt="image" />').trigger( "create" );
+				$('#prix_article').html('<h1>'+prix+' F CFA</h1>').trigger( "create" );
+				$('#etat_article').html('<h2>'+etat+'</h2>').trigger( "create" );
+				$('#caracteristique').append(caracteristiques).trigger( "create" );
 				$('#wrap_description p').text(description).trigger( "create" );
 			});
 			//output.listview('refresh'); //Permet d'appliquer le style JQM aux elts nouvellement ajoutés

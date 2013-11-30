@@ -32,26 +32,26 @@
     <div data-role="page" data-theme='b'>
 	        
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
-            <a href="index.html" data-ajax="false"><i class='icon-chevron-left'></i></a>
+            <a href="#" data-rel="back" data-ajax="false"><i class='icon-chevron-left'></i></a>
             <h1>Recherche avancée</h1>
         </div>
         
         <div data-role="content">   
 
-            <form action="" method="post" id="">
+            <form action="resultat_recherche.html" method="get" data-ajax="false">
                 <div style="padding: 0 20px">
                     <div data-role="fieldcontain">
                         <label for="recherche" class="ui-hidden-accessible">Votre recherche</label>
-                        <input name="recherche" type="text" data-clear-btn="true" placeholder="Votre recherche ici...">
+                        <input name="recherche"  id="recherche" type="text" data-clear-btn="true" required placeholder="Votre recherche ici...">
                     </div>
                     <div class="ui-grid-a">
                         <div class="ui-block-a">
-                            <label for="min" class="ui-hidden-accessible">Minimum:</label>
-                            <input type="text" name="min" id="min" placeholder="Prix Minimum" data-clear-btn="true">
+                            <label for="prix_min" class="ui-hidden-accessible">Minimum:</label>
+                            <input type="text" name="prix_min" id="prix_min" placeholder="Prix Minimum" data-clear-btn="true">
                         </div>
                         <div class="ui-block-b">
-                            <label for="max" class="ui-hidden-accessible">Maximum:</label>
-                            <input type="text" name="max" id="max" placeholder="Prix Maximum" data-clear-btn="true">
+                            <label for="prix_max" class="ui-hidden-accessible">Maximum:</label>
+                            <input type="text" name="prix_max" id="prix_max" placeholder="Prix Maximum" data-clear-btn="true">
                         </div>
                     </div>                                        
                     <div data-role="fieldcontain">
@@ -98,19 +98,6 @@
                 
             </form>
             
-			<ul data-nativedroid-plugin='cards'>
-
-                <!--<li data-cards-type='publictransport'>
-                    <ul data-role="listview" data-inset="false" data-icon="false">
-                        <li><a href="details_article.html">
-                            <img src="http://www.placehold.it/150x150">
-                            <h1>Boutique 1</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                        </a></li>
-                    </ul>
-                </li>-->
-
-			</ul>
             
         </div>
 

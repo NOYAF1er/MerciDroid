@@ -23,6 +23,11 @@
 		<!-- jQuery / jQueryMobile Scripts -->
 		<script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/jquery.mobile-1.3.1.min.js"></script>
+        
+        <!--script de chargement des détails d'une annonce et de son auteur-->
+        <!--<script src="js/ajax/get_articles_annonceur.js"></script>-->
+        <script src="js/ajax/get_info_annonceur.js"></script>
+        <script src="js/ajax/get_articles_annonceur.js"></script>
 
     </head>
     <body>
@@ -41,97 +46,35 @@
         <div data-role="content">   
 
 
-			<ul data-nativedroid-plugin='cards'>
+			<ul data-nativedroid-plugin='cards' id="wrap">
 				<li data-cards-type='weather'>
-					<h1>Zurich</h1>
-					<h2>Switzerland</h2>
-					<ul class='detail'>
-						<li><i class='icon-circle sunny'></i>
-							<span>SUNNY</span>
-							<span><i class='icon-fire'></i> 3km/h</span>
-						</li>
-						<li>14&deg;</li>
-					</ul>
-					<ul class='week'>
-						<li>
-							<span>WED</span>
-							<i class='icon-cloud'></i>
-							<strong>24&deg;</strong>
-							<span>11&deg;</span>
-						</li>
-						<li>
-							<span>THU</span>
-							<i class='icon-cloud'></i>
-							<strong>20&deg;</strong>
-							<span>10&deg;</span>
-						</li>
-						<li>
-							<span>FRI</span>
-							<i class='icon-cloud'></i>
-							<strong>11&deg;</strong>
-							<span>3&deg;</span>
-						</li>
-						<li>
-							<span>SAT</span>
-							<i class='icon-cloud'></i>
-							<strong>4&deg;</strong>
-							<span>0&deg;</span>
-						</li>
-					</ul>
+                    <ul data-role="listview">
+                    	<li id="img"> </li>
+                    	<li id="nom"> </li>
+                    </ul>
 				</li>
 
 				<li data-cards-type='sports'>
 					<h1>Contacts</h1>
                     <ul>
-                    	<li>+225 01 02 03 04</li>
-                        <li>+225 07 08 02 04</li>
-                        <li>johndoe@merci.com</li>
+                    	<li id="contacts"> </li>
+                        <li id="email"> </li>
                     </ul>
 				</li>
                 
 				<li data-cards-type='sports'>
 					<h1>Localisation</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p id="localisation"> </p>
 				</li>
 
 				<li data-cards-type='text'>
 					<h1>Description</h1>
-					<h2>Subtitle of a default card</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec sapien eu lorem condimentum mollis vel vel mauris. Proin dolor libero, ultricies quis semper eu, bibendum nec quam.</p>
+					<p id="description"> </p>
 				</li>
                 
                 <li data-cards-type='text'><h1>Publications</h1></li>
-                
-				<li data-cards-type='publictransport'>
-                    <ul data-role="listview" data-inset="false" data-icon="false">
-                        <li><a href="details_article.html">
-                            <img src="http://www.placehold.it/150x150">
-                            <h1>Samsung Galaxy S3</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                        </a></li>
-                    </ul>
-				</li>
-                
-				<li data-cards-type='publictransport'>
-                    <ul data-role="listview" data-inset="false" data-icon="false">
-                        <li><a href="details_article.html">
-                            <img src="http://www.placehold.it/150x150">
-                            <h1>Samsung Galaxy S2</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                        </a></li>
-                    </ul>
-				</li>
-                
-				<li data-cards-type='publictransport'>
-                    <ul data-role="listview" data-inset="false" data-icon="false">
-                        <li><a href="details_article.html">
-                            <img src="http://www.placehold.it/150x150">
-                            <h1>Samsung Galaxy S4</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                        </a></li>
-                    </ul>
-				</li>
-                
+                <span id="publications"> </span>                
+                                
 			</ul>
 	        
         </div>

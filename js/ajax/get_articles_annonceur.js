@@ -9,19 +9,9 @@ $(document).ready(function(){
 		var x = t[ i ].split('=');
 	}
 	
-	//Conditions
-	if(x[0]=="id"){
-		var lien = 'http://127.0.0.1/Merci/php/getArticles.php';
-		var valeur_data = 'categorie='+x[1];
-	
-	} else{
-		if(x[0]=="id_r"){
-			var lien = 'http://127.0.0.1/Merci/php/getArticlesByRubrique.php';
-			var valeur_data = 'rubrique='+x[1];
-		}
-	}
-	
-	var output = $('#wrap_articles');
+	var valeur_data = 'auteur='+x[1];
+	var lien = 'http://127.0.0.1/Merci/php/getArticlesAnnonceur.php';	
+	var output = $('#wrap');
 	
 	$.ajax({
 		url: lien,

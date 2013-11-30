@@ -1,27 +1,18 @@
-// Script Ajax de recupération des catégorie
-
-$(document).ready(function(){
+$(document).ready(function() {
+		
 	
-	//Récupère les paramètre de l'url de la page
 	var t = location.search.substring(1).split('&');
 	var f = [];
 	for (var i=0; i<t.length; i++){
 		var x = t[ i ].split('=');
+		f[x[0]]=x[1];
 	}
+	$("#recherche").val(f["recherche"]).trigger( "create" );						
 	
-	//Conditions
-	if(x[0]=="id"){
-		var lien = 'http://127.0.0.1/Merci/php/getArticles.php';
-		var valeur_data = 'categorie='+x[1];
+	var lien = 'http://127.0.0.1/Merci/php/recherche.php';
+	var valeur_data = location.search.substring(1); //Récupère les paramètre de l'url de la page
 	
-	} else{
-		if(x[0]=="id_r"){
-			var lien = 'http://127.0.0.1/Merci/php/getArticlesByRubrique.php';
-			var valeur_data = 'rubrique='+x[1];
-		}
-	}
-	
-	var output = $('#wrap_articles');
+	var output = $('#wrap');
 	
 	$.ajax({
 		url: lien,
@@ -43,10 +34,9 @@ $(document).ready(function(){
 									+'</a></li>'
 								+'</ul>'
 							+'</li>';
-										
+				
 				output.append(donnees).trigger( "create" ); //simule la creation de l'élément dc lui applique le style JQM
 			});
-			//output.listview('refresh'); //Permet d'appliquer le style JQM aux elts nouvellement ajoutés
 		},
 		error: function(data, status, erreur){
 			console.log(data);
@@ -54,19 +44,5 @@ $(document).ready(function(){
 		}
 	});
 	return false;	
-});     
-
-/**
- * Fonction de récupération des paramètres GET de la page
- * @return Array Tableau associatif contenant les paramètres GET
- *//*
-function extractUrlParams(){	
-	var t = location.search.substring(1).split('&');
-	var f = [];
-	for (var i=0; i<t.length; i++){
-		var x = t[ i ].split('=');
-		f[x[0]]=x[1];
-	}
-	return x;
-}
-*/
+});
+    

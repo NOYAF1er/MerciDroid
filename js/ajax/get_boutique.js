@@ -2,33 +2,13 @@
 
 $(document).ready(function(){
 	
-	//Récupère les paramètre de l'url de la page
-	var t = location.search.substring(1).split('&');
-	var f = [];
-	for (var i=0; i<t.length; i++){
-		var x = t[ i ].split('=');
-	}
-	
-	//Conditions
-	if(x[0]=="id"){
-		var lien = 'http://127.0.0.1/Merci/php/getArticles.php';
-		var valeur_data = 'categorie='+x[1];
-	
-	} else{
-		if(x[0]=="id_r"){
-			var lien = 'http://127.0.0.1/Merci/php/getArticlesByRubrique.php';
-			var valeur_data = 'rubrique='+x[1];
-		}
-	}
-	
-	var output = $('#wrap_articles');
+	var output = $('#wrap');
+	var lien = 'http://127.0.0.1/Merci/php/getBoutique.php';
 	
 	$.ajax({
 		url: lien,
 		dataType: 'jsonp',
 		jsonp: 'jsoncallback',
-		type: 'GET',
-		data: valeur_data,
 		beforeSend : function() {$.mobile.loading('show')},
 		complete   : function() {$.mobile.loading('hide')},
 		timeout: 5000,
@@ -36,10 +16,10 @@ $(document).ready(function(){
 			$.each(data, function(i,item){
 				var donnees = '<li data-cards-type=\'publictransport\'>'
 								+'<ul data-role="listview" data-inset="false" data-icon="false">'
-									+'<li><a href="details_article.html?id='+item.id+'" data-ajax="false">'
+									+'<li><a href="annonceur.html?id_a='+item.id+'" data-ajax="false">'
 										+'<img src="'+item.img+'">'
 										+'<h1>'+item.nom+'</h1>'
-										+'<p>'+item.caracteristiques+'</p>'
+										+'<p>'+item.description+'</p>'
 									+'</a></li>'
 								+'</ul>'
 							+'</li>';
@@ -55,18 +35,3 @@ $(document).ready(function(){
 	});
 	return false;	
 });     
-
-/**
- * Fonction de récupération des paramètres GET de la page
- * @return Array Tableau associatif contenant les paramètres GET
- *//*
-function extractUrlParams(){	
-	var t = location.search.substring(1).split('&');
-	var f = [];
-	for (var i=0; i<t.length; i++){
-		var x = t[ i ].split('=');
-		f[x[0]]=x[1];
-	}
-	return x;
-}
-*/
