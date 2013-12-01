@@ -10,7 +10,7 @@ $(document).ready(function(){
 	}
 	
 	var valeur_data = 'auteur='+x[1];
-	var lien = 'http://127.0.0.1/Merci/php/getArticlesAnnonceur.php';	
+	var lien = 'http://merci.bl.ee/php/getArticlesAnnonceur.php';	
 	var output = $('#wrap');
 	
 	$.ajax({

@@ -20,7 +20,7 @@ $(document).ready(function(){
 	}
 	
 	var output = $('#list_panel');
-	var lien = 'http://127.0.0.1/Merci/php/getRubrique.php';
+	var lien = 'http://merci.bl.ee/php/getRubrique.php';
 	
 	$.ajax({
 		url: lien,

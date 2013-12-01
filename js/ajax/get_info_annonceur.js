@@ -20,7 +20,7 @@ $(document).ready(function(){
 		}
 	}
 	
-	var lien = 'http://127.0.0.1/Merci/php/getInfoAnnonceur.php';
+	var lien = 'http://merci.bl.ee/php/getInfoAnnonceur.php';
 	
 	$.ajax({
 		url: lien,

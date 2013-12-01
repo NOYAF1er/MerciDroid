@@ -11,7 +11,7 @@ $(document).ready(function(){
 	
 	//Conditions
 	if(x[0]=="id"){
-		var lien = 'http://127.0.0.1/Merci/php/getArticles.php';
+		var lien = 'http://merci.bl.ee/php/getArticles.php';
 		var valeur_data = 'categorie='+x[1];
 	
 	} else{

@@ -3,7 +3,7 @@
 $(document).ready(function(){
 	
 	var output = $('#wrap');
-	var lien = 'http://127.0.0.1/Merci/php/getCategorie.php';
+	var lien = 'http://merci.bl.ee/php/getCategorie.php';
 	
 	$.ajax({
 		url: lien,

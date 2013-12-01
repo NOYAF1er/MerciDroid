@@ -6,7 +6,7 @@ $(document).ready(function(){
 	var url = window.location.search;
 	var id_article = 	url.substring(url.lastIndexOf("=")+1);
 	
-	var lien = 'http://127.0.0.1/Merci/php/getInfoArticle.php';
+	var lien = 'http://merci.bl.ee/php/getInfoArticle.php';
 	
 	$.ajax({
 		url: lien,

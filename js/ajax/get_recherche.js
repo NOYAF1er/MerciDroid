@@ -9,7 +9,7 @@ $(document).ready(function() {
 	}
 	$("#recherche").val(f["recherche"]).trigger( "create" );						
 	
-	var lien = 'http://127.0.0.1/Merci/php/recherche.php';
+	var lien = 'http://merci.bl.ee/php/recherche.php';
 	var valeur_data = location.search.substring(1); //Récupère les paramètre de l'url de la page
 	
 	var output = $('#wrap');

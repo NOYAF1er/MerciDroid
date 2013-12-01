@@ -1,6 +1,6 @@
 function envoi_msg(){
 		
-	var lien = 'http://127.0.0.1/Merci/php/suggestion.php';
+	var lien = 'http://merci.bl.ee/php/suggestion.php';
 	var email = $('#mail').val();
 	var msg = $('#msg').val();
 	
