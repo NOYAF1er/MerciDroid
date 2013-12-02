@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Merci !</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		
+		<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+		<!-- jQueryMobileCSS - original without styling -->
+        <link rel="stylesheet" href="css/jquerymobile.css" />
+
+		<!-- nativeDroid core CSS -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+
+		<!-- nativeDroid: Light/Dark -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+
+		<!-- nativeDroid: Color Schemes -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+
+		<!-- jQuery / jQueryMobile Scripts -->
+		<script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.mobile-1.3.1.min.js"></script>
+
+    </head>
+    <body>
+
+	<div id='map-canvas'></div>
+        
+    <div data-role="page" data-theme='b'>
+	        
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <a href="#" data-rel="back" data-ajax="false"><i class='icon-chevron-left'></i></a>
+            <h1>Recherche avancée</h1>
+        </div>
+        
+        <div data-role="content">   
+
+            <form action="resultat_recherche.html" method="get" data-ajax="false">
+                <div style="padding: 0 20px">
+                    <div data-role="fieldcontain">
+                        <label for="recherche" class="ui-hidden-accessible">Votre recherche</label>
+                        <input name="recherche"  id="recherche" type="text" data-clear-btn="true" required placeholder="Votre recherche ici...">
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label for="prix_min" class="ui-hidden-accessible">Minimum:</label>
+                            <input type="text" name="prix_min" id="prix_min" placeholder="Prix Minimum" data-clear-btn="true">
+                        </div>
+                        <div class="ui-block-b">
+                            <label for="prix_max" class="ui-hidden-accessible">Maximum:</label>
+                            <input type="text" name="prix_max" id="prix_max" placeholder="Prix Maximum" data-clear-btn="true">
+                        </div>
+                    </div>                                        
+                    <div data-role="fieldcontain">
+                        <label for="categorie" class="select">Catégorie:</label>
+                        <select name="categorie" id="categorie" data-native-menu="false">
+                            <option value="toute">&nbsp;</option>
+                            <option value="informatique">Informatique</option>
+                            <option value="telephonie">Téléphonie</option>
+                            <option value="multimedia">Multimedia</option>
+                            <option value="services">Services</option>
+                            <option value="vestimentaire">Vestimentaire</option>
+                            <option value="bijoux">Bijoux et accessoires</option>
+                            <option value="auto">Auto, Moto</option>
+                            <option value="sport">Sport</option>
+                            <option value="jeux">Jeux, Jouets</option>
+                        </select>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="rubrique" class="select">Rubrique:</label>
+                        <select name="rubrique" id="rubrique" data-native-menu="false">
+                            <option value="0">&nbsp;</option>
+                            <option value="1">Rubrique 1</option>
+                            <option value="2">Rubrique 2</option>
+                            <option value="3">Rubrique 3</option>
+                            <option value="4">Rubrique 4</option>
+                            <option value="5">Rubrique 5</option>
+                        </select>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="sousrubrique" class="select">Sous-rubrique:</label>
+                        <select name="sousrubrique" id="sousrubrique" data-native-menu="false">
+                            <option value="0">&nbsp;</option>
+                            <option value="1">Sous-rubrique 1</option>
+                            <option value="2">Sous-rubrique 2</option>
+                            <option value="3">Sous-rubrique 3</option>
+                            <option value="4">Sous-rubrique 4</option>
+                            <option value="5">Sous-rubrique 5</option>
+                        </select>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <button type="submit" id="submit-1" data-icon="search" data-iconpos="left">Chercher</button>
+                    </div>
+                </div>                    
+                
+            </form>
+            
+            
+        </div>
+
+    </div>
+    
+
+    <script src="js/nativedroid.script.js"></script>
+    </body>
+</html>
